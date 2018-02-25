@@ -1,0 +1,10 @@
+version: '2'
+services:
+  redis-task-monitor:
+    image: 'redis-task-monitor'
+    ports:
+      - 8080:8080
+    links:
+      - redis:redis
+  redis:
+    image: redis:3
